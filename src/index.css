@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    background-color: #050811;
+    color: #e6e2da;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #050811;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle range slider for nighttime comfort */
+input[type='range'].sleep-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(230, 226, 218, 0.12);
+  height: 4px;
+  border-radius: 999px;
+  outline: none;
+}
+
+input[type='range'].sleep-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #c4b8e6;
+  cursor: pointer;
+  border: 2px solid #0b1020;
+  box-shadow: 0 0 12px rgba(184, 174, 220, 0.35);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type='range'].sleep-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+  background: #dbd2f2;
+}
+
+input[type='range'].sleep-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #c4b8e6;
+  cursor: pointer;
+  border: 2px solid #0b1020;
+  box-shadow: 0 0 12px rgba(184, 174, 220, 0.35);
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 226, 218, 0.12);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(230, 226, 218, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
