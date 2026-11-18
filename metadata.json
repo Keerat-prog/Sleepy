@@ -2,5 +2,7 @@
   "name": "Sleepwell",
   "description": "A peaceful nighttime sleep companion with ambient soundscapes, monotonous reading and narration, eye relaxation, and random thought exercises.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
